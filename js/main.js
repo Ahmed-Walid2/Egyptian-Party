@@ -67,6 +67,8 @@ function getDate() {
   $(".secs").text(`${secs} sec`);
 }
 
+getDate();
+
 setInterval(() => {
   getDate();
 }, 1000);
