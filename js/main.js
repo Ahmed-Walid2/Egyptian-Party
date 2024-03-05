@@ -41,7 +41,7 @@ $("#slider .openFour").on("click", function () {
 // Counter
 
 function getDate() {
-  let partyDate = new Date("23 january 2024 10:00:00");
+  let partyDate = new Date("23 january 2025 10:00:00");
   // convert date from milli seconds to seconds
   partyDate = partyDate.getTime() / 1000;
 
@@ -52,12 +52,12 @@ function getDate() {
 
   timeDifference = partyDate - currentTime;
 
-  let days = Math.trunc(timeDifference / (24 * 60 * 60));
-  let hours = Math.trunc((timeDifference - days * (24 * 60 * 60)) / 3600);
-  let mins = Math.trunc(
+  let days = Math.floor(timeDifference / (24 * 60 * 60));
+  let hours = Math.floor((timeDifference - days * (24 * 60 * 60)) / 3600);
+  let mins = Math.floor(
     (timeDifference - days * (24 * 60 * 60) - hours * 3600) / 60
   );
-  let secs = Math.trunc(
+  let secs = Math.floor(
     timeDifference - days * (24 * 60 * 60) - hours * 3600 - mins * 60
   );
 
